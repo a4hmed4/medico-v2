@@ -11,7 +11,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <img src="../../Img/icon.ico" alt="Medico" className="h-8 w-8" />
+            <img src="../../../Img/icon.ico" alt="Medico" className="h-8 w-8" />
             <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">Medico</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
