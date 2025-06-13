@@ -12,7 +12,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <img src="../../../Img/icon.ico" alt="kMedico" className="h-8 w-8" />
-            <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">Medico</span>
+            <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">Medvico</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#features" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Features</a>
