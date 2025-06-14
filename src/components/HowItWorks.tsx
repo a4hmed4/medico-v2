@@ -1,57 +1,70 @@
 import React from 'react';
-import { UserPlus, ClipboardList, Bot, ShieldCheck } from 'lucide-react';
-
-const steps = [
-  {
-    title: 'Create Your Account',
-    description: 'Sign up in minutes and complete your health profile.',
-    icon: UserPlus,
-  },
-  {
-    title: 'Upload Scans',
-    description: 'View and manage your health records anytime, anywhere.',
-    icon: ClipboardList,
-  },
-  {
-    title: 'Connect with ChatBot',
-    description: 'Get instant insights and answers about your health.',
-    icon: Bot,
-  },
-  {
-    title: 'Get Premium Benefits',
-    description: 'We securely store your medical data so you can access it whenever you need.',
-    icon: ShieldCheck,
-  },
-];
+import { Download, CheckCircle2 } from 'lucide-react';
 
 const HowItWorks = () => {
   return (
-    <div id="how-it-works" className="py-12 bg-white dark:bg-gray-900">
+    <div className="bg-gray-50 dark:bg-gray-800 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-            Start your healthcare journey in 4 simple steps
+        <div className="text-center">
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white sm:text-4xl">
+            How It Works
+          </h2>
+          <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
+            Get started with Medico in three simple steps
           </p>
         </div>
 
-        <div className="mt-10">
-          <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-x-8 md:gap-y-10">
-            {steps.map((step, indeex) => (
-              <div key={step.title} className="relative">
-                <div className="flex flex-col items-center">
-                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300">
-                    <step.icon className="h-8 w-8" aria-hidden="true" />
-                  </div>
-                  <h3 className="mt-6 text-lg leading-6 font-medium text-gray-900 dark:text-white text-center">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-base text-gray-500 dark:text-gray-400 text-center">
-                    {step.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Step 1 */}
+          <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+            <div className="text-blue-600 dark:text-blue-400 mb-4">
+              <CheckCircle2 className="h-8 w-8" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Download the App</h3>
+            <p className="text-gray-500 dark:text-gray-400">
+              Get our app from MediaFire and install it on your device
+            </p>
           </div>
+
+          {/* Step 2 */}
+          <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+            <div className="text-blue-600 dark:text-blue-400 mb-4">
+              <CheckCircle2 className="h-8 w-8" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Create Your Account</h3>
+            <p className="text-gray-500 dark:text-gray-400">
+              Sign up with your email and set up your profile
+            </p>
+          </div>
+
+          {/* Step 3 */}
+          <div className="bg-white dark:bg-gray-700 rounded-lg shadow-lg p-6 transform transition duration-500 hover:scale-105">
+            <div className="text-blue-600 dark:text-blue-400 mb-4">
+              <CheckCircle2 className="h-8 w-8" />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Start Using Medico</h3>
+            <p className="text-gray-500 dark:text-gray-400">
+              Begin your healthcare journey with AI-powered diagnosis
+            </p>
+          </div>
+        </div>
+
+        {/* Download Section */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex rounded-md shadow">
+            <a
+              href="https://www.mediafire.com/file/your-app-file/app.apk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              <Download className="mr-2 h-5 w-5" />
+              Download App Now
+            </a>
+          </div>
+          <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+            Available for Android devices
+          </p>
         </div>
       </div>
     </div>
