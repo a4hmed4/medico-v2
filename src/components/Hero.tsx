@@ -1,9 +1,9 @@
 import React from 'react';
 import { ArrowRight, CheckCircle2, Stethoscope, Brain, Camera } from 'lucide-react';
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
-  
+    <>
       <div className="relative overflow-hidden bg-white dark:bg-gray-900 pt-16">
         <div className="max-w-7xl mx-auto">
           <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
@@ -14,9 +14,9 @@ const Hero = () => {
                   <span className="block text-blue-600">with Medico</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Medico is an AI-powered mobile application that provides accurate symptom-based diagnoses
-                and X-ray analysis, ensuring accessible and efficient healthcare solutions for users anytime, 
-                anywhere."
+                  Medico is an AI-powered mobile application that provides accurate symptom-based diagnoses
+                  and X-ray analysis, ensuring accessible and efficient healthcare solutions for users anytime, 
+                  anywhere.
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
@@ -110,6 +110,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+    </>
   );
 };
 
