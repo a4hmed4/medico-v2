@@ -3,7 +3,9 @@ import { Heart, Activity, Calendar, Users, Moon, Sun, ArrowRight } from 'lucide-
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
+import OurMission from './components/OurMission';
 import HowItWorks from './components/HowItWorks';
+import DownloadSection from './components/DownloadSection';
 import Pricing from './components/Pricing';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -12,7 +14,6 @@ import Section2 from './components/Section2';
 import Results from './components/Results';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
-import DownloadSection from './components/DownloadSection';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -41,15 +42,16 @@ function App() {
         <main>
           <Hero />
           <Features />
+          <OurMission />
           <Section2 />
           <Results />
+          <HowItWorks />
+          <DownloadSection />
           <Testimonials />
           <FAQ />
-          <HowItWorks />
           <Pricing />
           <About />
           <Contact />
-          <DownloadSection />
         </main>
         <Footer />
       </div>
