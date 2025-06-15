@@ -12,7 +12,7 @@ import Section2 from './components/Section2';
 import Results from './components/Results';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
-// import Partners from './components/Partners';
+import DownloadSection from './components/DownloadSection';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -41,16 +41,15 @@ function App() {
         <main>
           <Hero />
           <Features />
-          <Section2/>
-          <Results/>
+          <Section2 />
+          <Results />
           <Testimonials />
-          {/* <Partners /> */}
-          
           <FAQ />
           <HowItWorks />
           <Pricing />
           <About />
           <Contact />
+          <DownloadSection />
         </main>
         <Footer />
       </div>

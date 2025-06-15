@@ -1,55 +1,69 @@
 import React from 'react';
-import { FileText, Lock, UploadIcon, MessageSquare } from 'lucide-react';
+import { Brain, Camera, MessageSquare, Shield, Clock, Heart } from 'lucide-react';
 
-const features = [
-  {
-    name: 'Digital Medical History',
-    description: 'Keep your medical records safe and check them anytime, anywhere',
-    icon: FileText,
-  },
-  {
-    name: 'Scan Analysis',
-    description: 'Get quick reports by uploading your medical scans.',
-    icon: UploadIcon,
-  },
-  {
-    name: 'Seamless Communication',
-    description: 'Chat with our AI assistant and get the help you need.',
-    icon: MessageSquare,
-  },
-  {
-    name: 'Enterprise-grade Security',
-    description: 'Your health data is safe and protected.',
-    icon: Lock,
-  },
-];
+const Features: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Diagnosis",
+      description: "Get instant, accurate diagnoses powered by advanced artificial intelligence technology."
+    },
+    {
+      icon: Camera,
+      title: "X-ray Analysis",
+      description: "Upload and analyze X-ray images with our cutting-edge AI image recognition system."
+    },
+    {
+      icon: MessageSquare,
+      title: "24/7 Health Assistant",
+      description: "Chat with our AI health assistant anytime for medical advice and information."
+    },
+    {
+      icon: Shield,
+      title: "Secure & Private",
+      description: "Your health data is encrypted and protected with enterprise-grade security."
+    },
+    {
+      icon: Clock,
+      title: "Instant Results",
+      description: "Get immediate analysis and insights without waiting for appointments."
+    },
+    {
+      icon: Heart,
+      title: "Personalized Care",
+      description: "Receive tailored health recommendations based on your medical history."
+    }
+  ];
 
-const Features = () => {
   return (
-    <div id="features" className="py-12 bg-gray-50 dark:bg-gray-800">
+    <div id="features" className="bg-white dark:bg-gray-900 py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
-          <h2 className="text-base text-blue-600 font-semibold tracking-wide uppercase"></h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-          Your Health, In Your Hands
-          </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-400 lg:mx-auto">
-          Our app gives you everything you need to take care of your health easily and securely.
+        <div className="text-center">
+          <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white sm:text-5xl">
+            Powerful Features
+          </h2>
+          <p className="mt-4 text-xl text-gray-500 dark:text-gray-400 max-w-3xl mx-auto">
+            Experience healthcare like never before with our innovative features
           </p>
         </div>
 
-        <div className="mt-10">
-          <div className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-            {features.map((feature) => (
-              <div key={feature.name} className="relative">
-                <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
-                  <feature.icon className="h-6 w-6" aria-hidden="true" />
-                </div>
-                <p className="ml-16 text-lg leading-6 font-medium text-gray-900 dark:text-white">{feature.name}</p>
-                <p className="mt-2 ml-16 text-base text-gray-500 dark:text-gray-400">{feature.description}</p>
+        <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="relative p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            >
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                <feature.icon className="h-6 w-6" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-base text-gray-500 dark:text-gray-400">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
