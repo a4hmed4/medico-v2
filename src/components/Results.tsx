@@ -34,7 +34,7 @@ const Results = () => {
               <div className="w-full bg-gray-200 rounded-full h-4 dark:bg-gray-700">
                 <div className="bg-blue-600 h-4 rounded-full" style={{ width: '66.7%' }}></div>
               </div>
-              <p className="mt-2 text-4xl font-bold text-blue-600">0.667</p>
+              <p className="mt-2 text-4xl font-bold text-blue-600">0.567</p>
             </div>
             <p className="mt-2 text-gray-500 dark:text-gray-400">BLEU Score with Beam Search using CheXNet.</p>
           </div>
