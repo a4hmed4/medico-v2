@@ -1,4 +1,7 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
+
+// Declare gtag as a global variable
+declare const gtag: (...args: any[]) => void;
 
 const Hero = () => {
   return (
@@ -12,14 +15,36 @@ const Hero = () => {
                 <span className="block text-blue-600">with Medico</span>
               </h1>
               <p className="mt-3 text-base text-gray-500 dark:text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Medico is an AI-powered mobile application that provides accurate symptom-based diagnoses
-                and X-ray analysis, ensuring accessible and efficient healthcare solutions for users anytime, 
+                Medico is an AI-powered mobile application that provides
+                accurate symptom-based diagnoses and X-ray analysis, ensuring
+                accessible and efficient healthcare solutions for users anytime,
                 anywhere.
               </p>
+              {/* <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                <div className="rounded-md shadow">
+                  <a
+                    href="https://www.mediafire.com/file/4fhptuujsg1pr07/medico.apk/file"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
+                  >
+                    Get Started for Free
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </div>
+              </div> */}
               <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                 <div className="rounded-md shadow">
                   <a
-                    href="https://www.mediafire.com/file/8ntzky0uywliakk/app-release.apk/file"
+                    href="https://www.mediafire.com/file/4fhptuujsg1pr07/medico.apk/file"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => {
+                      if (typeof gtag === "function") {
+                        gtag("event", "download_click", {
+                          event_category: "button",
+                          event_label: "Get Started for Free - APK",
+                        });
+                      }
+                    }}
                     className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
                   >
                     Get Started for Free

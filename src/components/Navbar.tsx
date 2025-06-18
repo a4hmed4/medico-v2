@@ -21,7 +21,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
             <a href="#about" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">About</a>
             <a href="#contact" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
             <a
-              href="https://www.mediafire.com/file/8ntzky0uywliakk/app-release.apk/file"
+              href="https://www.mediafire.com/file/4fhptuujsg1pr07/medico.apk/file"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
             >
               <Download className="mr-2 h-4 w-4" />
